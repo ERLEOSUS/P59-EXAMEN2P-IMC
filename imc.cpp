@@ -15,7 +15,6 @@ IMC::~IMC()
     delete ui;
 }
 
-
 void IMC::on_btnCalcular_clicked()
 {
     calcular();
@@ -81,9 +80,36 @@ void IMC::calcular()
         ui->outAltura->setText(QString::number(m_controlador->usuario()->altura())+" cm");
         ui->outPesoMin->setText(QString::number(m_controlador->usuario()->pesoMin())+" kg");
         ui->outPesoMax->setText(QString::number(m_controlador->usuario()->pesoMax())+" kg");
-        ui->progressBar->setValue(m_controlador->usuario()->imc()+12);
+        //llui->progressBar->setValue(m_controlador->usuario()->imc()+12);
 
 }
+    double imc=m_controlador->usuario()->imc();
+
+    if(imc>15 && imc<16){
+      ui->line->setGeometry(40,0,20,42);
+      ui->outEstado->setText("En riesgo");
+    }
+
+    if(imc>16 && imc<18.5){
+      ui->line->setGeometry(30,0,20,42);
+      ui->outEstado->setText("Bajo Peso");
+    }
+    if(imc>18.5 && imc<25){
+      ui->line->setGeometry(92,0,4,58);
+      ui->outEstado->setText("Peso Normal");
+    }
+    if(imc>25 && imc<30){
+      ui->line->setGeometry(130,0,20,42);
+      ui->outEstado->setText("Sobrepeso");
+    }
+    if(imc>30 && imc<35){
+      ui->line->setGeometry(180,0,20,42);
+      ui->outEstado->setText("Obesidad I");
+    }
+    if(imc>35&& imc<40){
+      ui->line->setGeometry(230,0,20,42);
+      ui->outEstado->setText("Obesidad II");
+    }
 
 }
 

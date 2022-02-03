@@ -34,4 +34,5 @@ RESOURCES += \
 DISTFILES += \
     Recursos/escala-de-obesidad-01.png \
     Recursos/imc.png \
+    diagrama_de_clases.qmodel \
     examen2p_ruso.ts

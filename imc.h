@@ -5,6 +5,9 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QDebug>
+#include <QPainter>
+
+
 
 #include "controlador.h"
 
@@ -34,5 +37,6 @@ private:
     QList<double>pesos;
     void guardar();
     void calcular();
+
 };
 #endif // IMC_H
