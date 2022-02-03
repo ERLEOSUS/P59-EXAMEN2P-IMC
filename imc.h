@@ -2,6 +2,12 @@
 #define IMC_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include <QFileDialog>
+#include <QDebug>
+
+#include "controlador.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class IMC; }
@@ -15,7 +21,18 @@ public:
     IMC(QWidget *parent = nullptr);
     ~IMC();
 
+private slots:
+    void on_btnCalcular_clicked();
+
+
+
+    void on_btnAgregar_clicked();
+
 private:
     Ui::IMC *ui;
+    Controlador *m_controlador;
+    QList<double>pesos;
+    void guardar();
+    void calcular();
 };
 #endif // IMC_H
