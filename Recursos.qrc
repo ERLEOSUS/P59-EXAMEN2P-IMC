@@ -1,8 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>examen2p_ruso.qm</file>
-        <file>../../../Dropbox/PC/Downloads/imc.png</file>
-        <file>../../Escritorio/escala-de-obesidad-01.png</file>
         <file>Recursos/escala-de-obesidad-01.png</file>
         <file>Recursos/imc.png</file>
     </qresource>
